@@ -31,7 +31,7 @@ prompt_shopping = "Produce a shopping list, and please don't include ingredients
 
 new_prompt = f"Given ingredients at home {ingredients} and these generated recipes: {old_prompt_result}, {prompt_shopping}"
 messages = [{"role": "user", "content": new_prompt}]
-completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=600, temperature=0)
+completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=200, temperature=0)
 
 # print response
 print("\n=====Shopping list ======= \n")
